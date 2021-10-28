@@ -15,3 +15,10 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+const checker = (arr, prim) => ({exists:arr.includes(prim), 
+    index:arr.findIndex(item=>item===prim),
+    allElementsAreNumbers:arr.every(item=>typeof(item)==="number"),
+    someElementsAreNumbers:arr.some(item=>typeof(item)==="number")
+                           })
+
+console.log(checker([1,5, true], "alm"))
